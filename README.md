@@ -1,24 +1,25 @@
 ## Introduction
 
+| Field | Details |
+|---|---|
+| **Discipline** | Computer Science and Engineering |
+| **Lab** | Web Technology Lab |
+| **Experiment** | Experiment No. 1 – Design a Registration Form Using HTML |
 
-<b>Discipline | <b>Fill your discipline name here
-:--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+### About the Experiment
 
-### About the Experiment 
+The objective of this experiment is to design and develop a student registration form using HTML. The form includes input fields for student details, such as name, roll number, email ID, phone number, gender, and other relevant information. This experiment helps students understand HTML forms, input elements, labels, buttons, and basic web page structure.
 
-Fill a brief description of this experiment here
-
-<b>Name of Developer | <b> Fill the name of experiment owner here 
-:--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+| Field | Details |
+|---|---|
+| **Name of Developer** | Amit Rajput |
+| **Institute** | Enter your institute name |
+| **Email ID** | Enter your email address |
+| **Department** | Computer Science and Engineering |
 
 ### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
-:--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+| Sr. No. | Name | Faculty or Student | Department | Institute | Email ID |
+|---|---|---|---|---|---|
+| 1 | Amit Rajput | Student | Computer Science and Engineering | Enter your institute name | Enter your email address |
+| 2 | Enter contributor's name | Student | Computer Science and Engineering | Enter your institute name | Enter email address |
