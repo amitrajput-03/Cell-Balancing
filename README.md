@@ -13,7 +13,7 @@ The objective of this experiment is to design and develop a student registration
 | Field | Details |
 |---|---|
 | **Name of Developer** | Amit Rajput |
-| **Institute** | Rajkiye Engineering |
+| **Institute** | Rajkiye Engineering College Banda |
 | **Email ID** | rajput0033amit@gmail.com |
 | **Department** | Computer Science and Engineering |
 
@@ -21,5 +21,5 @@ The objective of this experiment is to design and develop a student registration
 
 | Sr. No. | Name | Faculty or Student | Department | Institute | Email ID |
 |---|---|---|---|---|---|
-| 1 | Amit Rajput | Student | Computer Science and Engineering | Enter your institute name | Enter your email address |
+| 1 | Amit Rajput | Student | Computer Science and Engineering | Rajkiye Engineering College Banda | rajput0033amit@gmail.com |
 | 2 | Enter contributor's name | Student | Computer Science and Engineering | Enter your institute name | Enter email address |
