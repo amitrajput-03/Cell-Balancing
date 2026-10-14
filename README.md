@@ -4,7 +4,7 @@
 |---|---|
 | **Discipline** | Computer Science and Engineering |
 | **Lab** | Web Technology Lab |
-| **Experiment** | Experiment No. 1 – Design a Registration Form Using HTML |
+| **Experiment** | Experiment No. 1 Cell Balancing |
 
 ### About the Experiment
 
@@ -13,8 +13,8 @@ The objective of this experiment is to design and develop a student registration
 | Field | Details |
 |---|---|
 | **Name of Developer** | Amit Rajput |
-| **Institute** | Enter your institute name |
-| **Email ID** | Enter your email address |
+| **Institute** | Rajkiye Engineering |
+| **Email ID** | rajput0033amit@gmail.com |
 | **Department** | Computer Science and Engineering |
 
 ### Contributors List
