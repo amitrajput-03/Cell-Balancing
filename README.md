@@ -3,7 +3,7 @@
 | Field | Details |
 |---|---|
 | **Discipline** | Computer Science and Engineering |
-| **Lab** | Web Technology Lab |
+| **Lab** | Virtual Lab |
 | **Experiment** | Experiment No. 1 Cell Balancing |
 
 ### About the Experiment
@@ -15,7 +15,7 @@ The objective of this experiment is to design and develop a student registration
 | **Name of Developer** | Amit Rajput |
 | **Institute** | Rajkiye Engineering College Banda |
 | **Email ID** | rajput0033amit@gmail.com |
-| **Department** | Computer Science and Engineering |
+| **Department** | Information Technology |
 
 ### Contributors List
 
