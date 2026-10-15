@@ -2,7 +2,7 @@
 
 | Field | Details |
 |---|---|
-| **Discipline** | Computer Science and Engineering |
+| **Discipline** | REC Banda |
 | **Lab** | Virtual Lab |
 | **Experiment** | Experiment No. 1 Cell Balancing |
 
