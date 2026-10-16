@@ -1,1 +1,278 @@
-/* You CSS goes in here */
+
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary: #38bdf8;
+    --success: #22c55e;
+    --warning: #eab308;
+    --danger: #ef4444;
+    --border: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding: 25px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary);
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    margin-bottom: 12px;
+}
+
+header p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    min-width: 0;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 22px;
+}
+
+#sim-status {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 9px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    background: var(--bg-color);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: var(--primary);
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    background: var(--primary);
+    color: #082f49;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+button:focus-visible,
+select:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+#btn-pause {
+    background: var(--warning);
+    color: #422006;
+}
+
+#btn-reset {
+    background: var(--danger);
+    color: white;
+}
+
+#btn-start {
+    background: var(--success);
+    color: #052e16;
+}
+
+.pack-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.metric-box {
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    padding: 14px 10px;
+    border-radius: 10px;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+.metric-value {
+    color: var(--primary);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: bold;
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+}
+
+.battery-pack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cell-row {
+    display: grid;
+    grid-template-columns: 55px minmax(60px, 1fr) 115px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.cell-name {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.battery-rail {
+    height: 25px;
+    background: #334155;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #475569;
+}
+
+.battery-bar {
+    height: 100%;
+    width: 50%;
+    background: var(--success);
+    border-radius: 5px;
+    transition: width 0.25s ease, background 0.25s ease;
+}
+
+.cell-data {
+    font-size: 0.8rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.balancing-indicator {
+    grid-column: 2 / 4;
+    justify-self: end;
+    font-size: 0.75rem;
+    padding: 5px 9px;
+    border-radius: 20px;
+    color: var(--text-muted);
+    background: #334155;
+}
+
+.balancing-indicator.passive {
+    color: #fca5a5;
+    background: #7f1d1d;
+}
+
+.balancing-indicator.active {
+    color: #86efac;
+    background: #14532d;
+}
+
+.balancing-indicator.idle {
+    color: var(--text-muted);
+    background: #334155;
+}
+
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .pack-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .cell-row {
+        grid-template-columns: 48px minmax(50px, 1fr);
+        gap: 10px;
+    }
+
+    .cell-data {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+    .balancing-indicator {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+
+    .btn-container button {
+        flex: 1;
+    }
+}

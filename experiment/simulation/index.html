@@ -1,13 +1,103 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		hello this is my first project. My project is about simulation and experiment.
+<html lang="en">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>BMS Cell Balancing Control Simulator</h1>
+            <p>Interactive demonstration of Passive vs. Active Balancing Topologies</p>
+        </header>
+
+        <div class="dashboard">
+            <!-- Configuration Controls -->
+            <div class="card">
+                <h2>Simulation Controls</h2>
+                <div class="control-group">
+                    <div>
+                        <label for="strategy">Balancing Strategy</label>
+                        <select id="strategy">
+                            <option value="none">None (No Balancing)</option>
+                            <option value="passive">Passive (Resistive Dissipation)</option>
+                            <option value="active">Active (Redistributive Shuttling)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pack-state">Pack State</label>
+                        <select id="pack-state">
+                            <option value="charging">Charging (Constant Current)</option>
+                            <option value="idle">Idle / Standby</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Introduce Initial Mismatch</label>
+                        <button style="background: var(--border); color: white; margin-top:0.5rem;"
+                            onclick="resetToMismatch()">Apply Cell Mismatch</button>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button id="btn-start" onclick="startSim()">Run</button>
+                    <button id="btn-pause" onclick="pauseSim()">Pause</button>
+                    <button id="btn-reset" onclick="resetSim()">Reset</button>
+                </div>
+            </div>
+
+            <!-- Real-time Visualizer -->
+            <div class="card">
+                <h2>Pack Visualization <span id="sim-status"
+                        style="font-size:0.9rem; color:var(--text-muted);">Stopped</span></h2>
+
+                <div class="pack-metrics">
+                    <div class="metric-box">
+                        <div>Total Heat Wasted</div>
+                        <div class="metric-value" id="metric-heat">0.00 J</div>
+                    </div>
+                    <div class="metric-box">
+                        <div>Max Delta SoC</div>
+                        <div class="metric-value" id="metric-delta">0.0%</div>
+                    </div>
+                    <div class="metric-box">
+                        <div>Pack Avg Volts</div>
+                        <div class="metric-value" id="metric-voltage">3.30 V</div>
+                    </div>
+                </div>
+
+                <div class="battery-pack">
+                    <!-- Cell 1 -->
+                    <div class="cell-row" id="cell-0">
+                        <div class="cell-name">Cell 1</div>
+                        <div class="battery-rail">
+                            <div class="battery-bar" id="bar-0"></div>
+                        </div>
+                        <div class="cell-data"><span id="v-0">3.30</span>V (<span id="soc-0">50</span>%)</div>
+                        <span class="balancing-indicator" id="ind-0">Bypassing</span>
+                    </div>
+                    <!-- Cell 2 -->
+                    <div class="cell-row" id="cell-1">
+                        <div class="cell-name">Cell 2</div>
+                        <div class="battery-rail">
+                            <div class="battery-bar" id="bar-1"></div>
+                        </div>
+                        <div class="cell-data"><span id="v-1">3.30</span>V (<span id="soc-1">50</span>%)</div>
+                        <span class="balancing-indicator" id="ind-1">Bypassing</span>
+                    </div>
+                    <!-- Cell 3 -->
+                    <div class="cell-row" id="cell-2">
+                        <div class="cell-name">Cell 3</div>
+                        <div class="battery-rail">
+                            <div class="battery-bar" id="bar-2"></div>
+                        </div>
+                        <div class="cell-data"><span id="v-2">3.30</span>V (<span id="soc-2">50</span>%)</div>
+
+                        <script src="js/main.js"></script>
 </body>
+
 </html>
